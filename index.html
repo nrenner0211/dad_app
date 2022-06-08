@@ -9,42 +9,139 @@
     <link rel="stylesheet" src="./assets/css/style.css">
     <title>dad-app</title>
 </head>
-<body>
+<body class="light-green lighten-5">
 
     <!-- navigation -->
     <header>
-        <h1 class="header">
-            <a href="#">dad-app</a>
+        <h1 class="header center-align">
+            <a href="#" class="amber-text text-darken-1">dad-app <span id=emojiArray>👨</span> </a>
         </h1>
         <nav class="light-green darken-1">
             <ul>
                 <li>
-                    <a href="#dad-jokes">Dad Jokes</a>
-                </li>
-                <li>
                     <a href="#weather">Weather</a>
                 </li>
                 <li>
-                    <a href="#user-input">Contact Us</a>
+                    <a href="#gdtm-app">Good Day To Mow?</a>
                 </li>
                 <li>
-                    <a href="#footer">Special Thanks</a>
+                    <a href="#dad-jokes">Dad Joke Generator</a>
+                </li>
+                <li>
+                    <a href="#footer">Feedback & More</a>
                 </li>
             </ul>
         </nav>
     </header>
 
-    <!-- Page Layout here -->
-    <div class="row">
+    <main>
+        <!-- col 4 left side content here -->
+        <div class="row">
 
-        <div class="col s3">
-          search
+            <div class="col s4">
+                <div class="card-panel hoverable input-field">
+                    <form id="user-form" class="card-body">
+                        <label for="search">Search for your city!</label>
+                        <input name="search" id="search" type="text" autofocus="true" />
+
+                        <!-- javascript function -- use user input to get weather -->
+                        <button type="submit" class="amber darken-1 btn">Search</button>
+                    </form>
+                </div>
+
+                <!-- divider -->
+                <div class="divider"></div>
+
+                <!-- good day to mow app -->
+                <div id="gdtm-app" class="row">
+                    <div class="col auto center-align">
+                        <div class="card hoverable">
+                            <div class="card-image">
+                                <img alt="grass and lawnmower background" src="./assets/images/mowing.jpg">
+                                <span class="card-title">
+                                    Our simple app uses the current weather to help you determine if it's a good day to mow today!
+                                </span>
+                            </div>
+                            <div class="text-container">
+
+                                <!-- javascript functionv-- yes/no display -->
+                               <span id="yesOrNo"></span>
+                            </div>
+                            <div class="card-action">
+                                <button type="submit" class="amber darken-1 btn">Good Day To Mow?</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- col 8 right side container / weather container -->            
+            <div class="row right">
+                <div class="col s8 auto">
+                    <div class="card medium">
+                        <div class="card-content white-text">
+                        <span class="card-title">Card Title</span>
+                        <p>I am a very simple card. I am good at containing small bits of information.
+                        I am convenient because I require little markup to use effectively.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- divider -->
+            <div class="divider"></div>
+
+            <!-- dad jokes container -->
+            <div id="dad-jokes" class="row">
+                <div class="col s8">
+                    <div class="card small hoverable">
+                        <div class="card-image">
+                            <img src="./assets/images/funny-lawn.jpg">
+                            <span class="card-title">Dad Joke Generator</span>
+                        </div>
+                        <div class="card-content">
+                        <p>
+                            Hit the button to generate a dad joke!
+                        </p>
+                        </div>
+                        <div class="card-action">
+
+                            <!-- javascript function -- generate dad joke -->
+                            <button id="generateJokeBtn" type="submit" class="amber darken-1 btn">Generate</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-  
-        <div class="col s9">
-          content
+    </main>
+
+    <!-- content divider -->
+    <div class="divider"></div>
+
+    <!-- footer/feedback section -->
+    <footer id="footer" class="page-footer light-green darken-1">
+        <div class="container">
+          <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">Thanks for visiting!</h5>
+                <p class="grey-text text-lighten-4">
+                    We hope you enjoyed our app! This group project was made in the month of June, so we were inspired by Father's Day.
+                </p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Leave us a message:</h5>
+                
+              
+            </div>
+          </div>
         </div>
-    </div>
+        <div class="footer-copyright">
+          <div class="container">
+          © dad-app
+          <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+          </div>
+        </div>
+    </footer>
         
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
