@@ -1,7 +1,9 @@
+//weather logic begins -Christian
 let isBadWeatherDay = false
 
 let weather = {
     myKey: "dcbc862bcf16c64fe76c5467e987cbd0",
+    //fetch weather from openweather API -Christian
     fetchWeather: function (city) {
         fetch("https://api.openweathermap.org/data/2.5/weather?q="
             + city + "&units=imperial&appid=" + this.myKey
@@ -12,17 +14,21 @@ let weather = {
     },
 
     displayWeather: function (data) {
+        document.querySelector("#mow-answer").innerText = "";
         var { name } = data;
+        // if statement to handle situation where there is no weather data (mispelled city, non existent location, etc.) -Christian
         if (data.weather) {
             var { icon, description } = data.weather[0];
             var { temp, temp_min, temp_max, humidity } = data.main;
 
+            // Bad weather conditions array -Christian
             var badWeatherWords = ["rain", "snow", "tornado", "sleet", "storm", "drizzle"];
+            // found out about and used "some" loop, which ends a for loop if "true" is returned -Christian
             badWeatherWords.some((badWeatherCondition) => {
+                // uses regular expression to seek out bad weather terms in description
                 isBadWeatherDay = new RegExp('\\b' + badWeatherCondition + '\\b').test(description);
                 return isBadWeatherDay;
             })
-            console.log(isBadWeatherDay);
 
             document.querySelector(".city").innerText = "Weather in " + name;
             document.querySelector(".temp").innerText = temp + "°F";
@@ -34,16 +40,20 @@ let weather = {
             document.querySelector(".city").innerText = "No results found, please try again.";
         }
     },
+    //City search bar function -Christian
     search: function () {
         this.fetchWeather(document.querySelector(".search-bar").value);
     }
 };
 
+//City search event listener -Christian
 document.querySelector("#search-button").addEventListener("click", function () {
     weather.search();
-
+    document.querySelector("#mow-button").classList.remove("hide");
+    document.querySelector(".search-alert").classList.add("hide");
 });
 
+//Good to mow button event listener -Christian
 document.querySelector("#mow-button").addEventListener("click", function () {
     let answerText = ""
     if (isBadWeatherDay) {
@@ -54,12 +64,13 @@ document.querySelector("#mow-button").addEventListener("click", function () {
     document.querySelector("#mow-answer").innerText = answerText;
 });
 
+//Chunk of code of below was erroring and stopping execution -Christian
 
 //header emoji content -- niki
-var iconArray = document.getElementById("iconArray");
-var stormY = ["🌩️", "⛈️", "☀️", "🌨️", "🌧️", "☁️", "🌤️", "🌦️"];
+//var iconArray = document.getElementById("iconArray");
+//var stormY = ["🌩️", "⛈️", "☀️", "🌨️", "🌧️", "☁️", "🌤️", "🌦️"];
 
-iconArray.addEventListener("mouseover", () => {
-    iconArray.innerText = stormY[Math.floor(Math.random() * stormY.length)]
-});
+//iconArray.addEventListener("mouseover", () => {
+    //iconArray.innerText = stormY[Math.floor(Math.random() * stormY.length)]
+//});
 //end header emoji content -- niki
