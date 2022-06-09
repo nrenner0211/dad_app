@@ -22,7 +22,7 @@ let weather = {
             var { temp, temp_min, temp_max, humidity } = data.main;
 
             // Bad weather conditions array -Christian
-            var badWeatherWords = ["rain", "snow", "tornado", "sleet", "storm", "drizzle"];
+            var badWeatherWords = ["rain", "snow", "tornado", "sleet", "storm", "drizzle", "thunderstorm"];
             // found out about and used "some" loop, which ends a for loop if "true" is returned -Christian
             badWeatherWords.some((badWeatherCondition) => {
                 // uses regular expression to seek out bad weather terms in description
@@ -48,6 +48,7 @@ let weather = {
 
 //City search event listener -Christian
 document.querySelector("#search-button").addEventListener("click", function () {
+    console.log("search button works");
     weather.search();
     document.querySelector("#mow-button").classList.remove("hide");
     document.querySelector(".search-alert").classList.add("hide");
