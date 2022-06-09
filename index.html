@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Compiled and minified CSS -->
+    <link rel="icon" href="./assets/images/best-dad.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" src="./assets/css/style.css">
     <title>dad-app</title>
@@ -15,26 +17,29 @@
 
     <!-- navigation -->
     <header>
-        <h1 class="header center-align">
-            <a href="#" class="amber-text text-darken-1">dad-app <span id=emojiArray>👨</span> </a>
-        </h1>
+        <div class="header center-align">
+            <a href="#" class="amber-text text-darken-1"><h1>dad-app</h1><img alt="best dad png" height="100" width="100" src="./assets/images/best-dad.png"></a>
+        </div>
         <nav class="light-green darken-1">
             <ul>
                 <li>
-                    <a href="#weather">Weather</a>
+                    <a href="#currentWeather" class="breadcrumb">Weather Report</a>
                 </li>
                 <li>
-                    <a href="#gdtm-app">Good Day To Mow?</a>
+                    <a href="#gdtm-app" class="breadcrumb">Good Day To Mow?</a>
                 </li>
                 <li>
-                    <a href="#dad-jokes">Dad Joke Generator</a>
+                    <a href="#dad-jokes" class="breadcrumb">Dad Joke Generator</a>
                 </li>
                 <li>
-                    <a href="#footer">Feedback & More</a>
+                    <a href="#footer" class="breadcrumb">Feedback & More</a>
                 </li>
             </ul>
         </nav>
     </header>
+
+    <!-- divider -->
+        <div class="divider"></div>
 
     <main>
         <!-- col 4 left side content here -->
@@ -47,7 +52,10 @@
                         <input class="search-bar" type="text" autofocus="true">
 
                         <!-- javascript function -- use user input to get weather -->
-                        <button id="search-button" type="submit" class="amber darken-1 btn">Search</button>
+
+                        <button id="search-button" type="submit" class="amber darken-1 btn">Submit
+                                             <i class="material-icons right">send</i>
+                      </button>
                     </form>
                 </div>
 
@@ -57,7 +65,7 @@
                 <!-- good day to mow app -->
                 <div id="gdtm-app" class="row">
                     <div class="col auto center-align">
-                        <div class="card hoverable">
+                        <div class="card large hoverable">
                             <div class="card-image">
                                 <img alt="grass and lawnmower background" src="./assets/images/mowing.jpg">
                                 <span class="card-title">
@@ -79,6 +87,7 @@
                 </div>
             </div>
 
+
             <!-- col 8 right side container / weather container -->
             <div class="weather display">
                 <h2 class="city"></h2>
@@ -89,26 +98,30 @@
                 </div>
                 <div class="highLow"></div>
                 <div class="humidity"></div>
+
             </div>
         </div>
 
         <!-- divider -->
         <div class="divider"></div>
 
-        <!-- dad jokes container -->
-        <div id="dad-jokes" class="row">
-            <div class="col s8">
-                <div class="card small hoverable">
-                    <div class="card-image">
-                        <img src="./assets/images/funny-lawn.jpg">
-                        <span class="card-title">Dad Joke Generator</span>
-                    </div>
-                    <div class="card-content">
-                        <p>
-                            Hit the button to generate a dad joke!
-                        </p>
-                    </div>
-                    <div class="card-action">
+
+            <!-- dad jokes container -->
+            <div id="dad-jokes" class="row center-align">
+                <div class="col s12">
+                    <div class="card large z-depth-5">
+                        <div class="card-image">
+                            <img src="./assets/images/funny-lawn.jpg">
+                            <span class="card-title">Dad Joke Generator</span>
+                        </div>
+                        <div class="card-content">
+
+                            <!-- javascript function -- diplay dad joke -->
+                            <span id="dadJoke" class="center-align">
+                                <h5 class="green-text text-darken-4">Hit the button to generate a dad joke!</h5>
+                            </span>
+                        </div>
+                        <div class="card-action">
 
                         <!-- javascript function -- generate dad joke -->
                         <button id="generateJokeBtn" type="submit" class="amber darken-1 btn">Generate</button>
@@ -125,26 +138,41 @@
     <!-- footer/feedback section -->
     <footer id="footer" class="page-footer light-green darken-1">
         <div class="container">
-            <div class="row">
-                <div class="col l6 s12">
-                    <h5 class="white-text">Thanks for visiting!</h5>
-                    <p class="grey-text text-lighten-4">
-                        We hope you enjoyed our app! This group project was made in the month of June, so we were
-                        inspired by Father's Day.
-                    </p>
-                </div>
-                <div class="col l4 offset-l2 s12">
-                    <h5 class="white-text">Leave us a message:</h5>
 
+          <div class="row">
+            <div class="col l6 s12">
+                <h4 class="white-text">Thanks for visiting!</h4>
+                <p class="grey-text text-lighten-4">
+                    We hope you enjoyed our app! This group project was made in the month of June, so we were inspired by Father's Day.
+                </p>
+            </div>
+            <div class="col l4 offset-l2 s12">
 
+                <div class="card small center-align hoverable">
+                    <div class="card-content">
+                        <h5 class="green-text text-darken-3">Contributors</h5>
+
+                        <!-- linkedin links? links to portfolios? or should be do some other kind of form? -->
+                        <ul>
+                            <li><a class="green-text text-darken-1" href="#!">Link 1</a></li>
+                            <li><a class="green-text text-darken-1" href="https://nrenner0211.github.io/my-first-portfolio/">
+                                Nicolette Renner's Portfolio</a>
+                            </li>
+                            <li><a class="green-text text-darken-1" href="#!">Link 3</a></li>
+                            <li><a class="green-text text-darken-1" href="#!">Link 4</a></li>
+                            <li><a class="green-text text-darken-1" href="#!">Link 5</a></li>
+                        </ul>
+                        
+                    </div>
                 </div>
+              
             </div>
         </div>
         <div class="footer-copyright">
-            <div class="container">
-                © dad-app
-                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-            </div>
+          <div class="container">
+          © dad-app
+          <a class="grey-text text-lighten-4 right" alt="Link to an infographic on men's health" href="https://www.mhanational.org/infographic-mental-health-men">Men's Mental Health Month</a>
+          </div>
         </div>
     </footer>
 
