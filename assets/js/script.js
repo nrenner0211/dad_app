@@ -20,12 +20,13 @@ let weather = {
         document.querySelector(".description").innerText = description;
         document.querySelector(".highLow").innerText = "High: " + temp_max + "°F Low: " + temp_min + "°F";
         document.querySelector(".humidity").innerText = "Humidity: " + humidity + "%";
+
     },
     search: function () {
         this.fetchWeather(document.querySelector(".search-bar").value);
     }
 };
 
-document.querySelector(".card-body button").addEventListener("onClick", function () {
+document.querySelector("#search-button").addEventListener("click", function () {
     weather.search();
 });
