@@ -14,22 +14,22 @@
 
     <!-- navigation -->
     <header>
-        <h1 class="header center-align">
-            <a href="#" class="amber-text text-darken-1">dad-app <span id=emojiArray>👨</span> </a>
-        </h1>
+        <div class="header center-align">
+            <a href="#" class="amber-text text-darken-1"><h1>dad-app</h1><img alt="best dad png" height="100" width="100" src="./assets/images/best-dad.png"></a>
+        </div>
         <nav class="light-green darken-1">
             <ul>
                 <li>
-                    <a href="#currentWeather">Weather Report</a>
+                    <a href="#currentWeather" class="breadcrumb">Weather Report</a>
                 </li>
                 <li>
-                    <a href="#gdtm-app">Good Day To Mow?</a>
+                    <a href="#gdtm-app" class="breadcrumb">Good Day To Mow?</a>
                 </li>
                 <li>
-                    <a href="#dad-jokes">Dad Joke Generator</a>
+                    <a href="#dad-jokes" class="breadcrumb">Dad Joke Generator</a>
                 </li>
                 <li>
-                    <a href="#footer">Feedback & More</a>
+                    <a href="#footer" class="breadcrumb">Feedback & More</a>
                 </li>
             </ul>
         </nav>
@@ -49,7 +49,7 @@
                         <input name="search" id="search" type="text" autofocus="true" />
 
                         <!-- javascript function -- use user input to get weather -->
-                        <button id="submitBtn" type="submit" class="amber darken-1 waves-effect btn">Submit
+                        <button id="submitBtn" type="submit" class="amber darken-1 waves-effect waves-light btn">Submit
                             <i class="material-icons right">send</i>
                         </button>
                     </form>
@@ -61,7 +61,7 @@
                 <!-- good day to mow app -->
                 <div id="gdtm-app" class="row">
                     <div class="col auto center-align">
-                        <div class="card hoverable">
+                        <div class="card large hoverable">
                             <div class="card-image">
                                 <img alt="grass and lawnmower background" src="./assets/images/mowing.jpg">
                                 <span class="card-title">
@@ -85,10 +85,10 @@
             
                 <div class="col s8">
                     <div class="card-title large center-align">
-                        <h4 class="green-text text-darken-4">🌤️ Weather Report</h4>
+                        <h3 class="green-text text-darken-4"><span id="iconArray">🌤️</span>Weather Report</h3>
 
                         <!-- javascript function -- insert weather -->
-                        <div id="currentWeather" class="card large card-panel hoverable">
+                        <div id="currentWeather" class="card large card-panel z-depth-5">
                             <div id="location"></div>
                             <div id="currentTemp"></div>
                             <div id="currentWind"></div>
@@ -98,13 +98,20 @@
                     </div>
                 </div>
 
+            <!-- content divider -->
+            <div class="divider"></div>
+
+            <div class="col s12 card-title large center-align">
+                <h3 class="amber-text text-darken-1">Before You Go . . . </h3>
+            </div>
+
             <!-- divider -->
             <div class="divider"></div>
 
             <!-- dad jokes container -->
             <div id="dad-jokes" class="row center-align">
                 <div class="col s12">
-                    <div class="card large hoverable">
+                    <div class="card large z-depth-5">
                         <div class="card-image">
                             <img src="./assets/images/funny-lawn.jpg">
                             <span class="card-title">Dad Joke Generator</span>
@@ -113,7 +120,7 @@
 
                             <!-- javascript function -- diplay dad joke -->
                             <span id="dadJoke" class="center-align">
-                                Hit the button to generate a dad joke!
+                                <h5 class="green-text text-darken-4">Hit the button to generate a dad joke!</h5>
                             </span>
                         </div>
                         <div class="card-action">
@@ -135,14 +142,30 @@
         <div class="container">
           <div class="row">
             <div class="col l6 s12">
-                <h5 class="white-text">Thanks for visiting!</h5>
+                <h4 class="white-text">Thanks for visiting!</h4>
                 <p class="grey-text text-lighten-4">
                     We hope you enjoyed our app! This group project was made in the month of June, so we were inspired by Father's Day.
                 </p>
             </div>
             <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Leave us a message:</h5>
-                
+
+                <div class="card small center-align hoverable">
+                    <div class="card-content">
+                        <h5 class="green-text text-darken-3">Contributors</h5>
+
+                        <!-- linkedin links? links to portfolios? or should be do some other kind of form? -->
+                        <ul>
+                            <li><a class="green-text text-darken-1" href="#!">Link 1</a></li>
+                            <li><a class="green-text text-darken-1" href="https://nrenner0211.github.io/my-first-portfolio/">
+                                Nicolette Renner's Portfolio</a>
+                            </li>
+                            <li><a class="green-text text-darken-1" href="#!">Link 3</a></li>
+                            <li><a class="green-text text-darken-1" href="#!">Link 4</a></li>
+                            <li><a class="green-text text-darken-1" href="#!">Link 5</a></li>
+                        </ul>
+                        
+                    </div>
+                </div>
               
             </div>
           </div>
@@ -150,7 +173,7 @@
         <div class="footer-copyright">
           <div class="container">
           © dad-app
-          <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+          <a class="grey-text text-lighten-4 right" alt="Link to an infographic on men's health" href="https://www.mhanational.org/infographic-mental-health-men">Men's Mental Health Month</a>
           </div>
         </div>
     </footer>
