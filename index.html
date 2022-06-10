@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,12 +12,15 @@
     <link rel="stylesheet" src="./assets/css/style.css">
     <title>dad-app</title>
 </head>
+
 <body class="light-green lighten-5">
 
     <!-- navigation -->
     <header>
         <div class="header center-align">
-            <a href="#" class="amber-text text-darken-1"><h1>dad-app</h1><img alt="best dad png" height="100" width="100" src="./assets/images/best-dad.png"></a>
+            <a href="#" class="amber-text text-darken-1">
+                <h1>dad-app</h1><img alt="best dad png" height="100" width="100" src="./assets/images/best-dad.png">
+            </a>
         </div>
         <nav class="light-green darken-1">
             <ul>
@@ -37,7 +41,7 @@
     </header>
 
     <!-- divider -->
-        <div class="divider"></div>
+    <div class="divider"></div>
 
     <main>
         <!-- col 4 left side content here -->
@@ -47,10 +51,11 @@
                 <div class="card-panel hoverable input-field">
                     <form id="user-form" class="card-body">
                         <label for="search">Search for your city!</label>
-                        <input name="search" id="search" type="text" autofocus="true" />
+                        <input class="search-bar" type="text" autofocus="true">
 
                         <!-- javascript function -- use user input to get weather -->
-                        <button id="submitBtn" type="submit" class="amber darken-1 waves-effect waves-light btn">Submit
+
+                        <button id="search-button" type="button" class="amber darken-1 btn">Submit
                             <i class="material-icons right">send</i>
                         </button>
                     </form>
@@ -66,72 +71,68 @@
                             <div class="card-image">
                                 <img alt="grass and lawnmower background" src="./assets/images/mowing.jpg">
                                 <span class="card-title">
-                                    Our simple app uses the current weather to help you determine if it's a good day to mow today!
+                                    Our simple app uses the current weather to help you determine if it's a good day to
+                                    mow today!
                                 </span>
                             </div>
                             <div class="text-container">
 
                                 <!-- javascript functionv-- yes/no display -->
-                               <span id="yesOrNo"></span>
+                                <span id="yesOrNo"></span>
                             </div>
                             <div class="card-action">
-                                <button type="submit" class="amber darken-1 btn">Good Day To Mow?</button>
+                                <span class="search-alert">Search a city to begin!</span>
+                                <button id="mow-button" type="button" class="amber darken-1 btn hide">Good Day To
+                                    Mow?</button>
                             </div>
+                            <div id="mow-answer"></div>
                         </div>
                     </div>
                 </div>
             </div>
-        
-            <!-- col 8 right side container / weather container -->   
-            
-                <div class="col s8">
-                    <div class="card-title large center-align">
-                        <h3 class="green-text text-darken-4"><span id="iconArray">🌤️</span>Weather Report</h3>
 
-                        <!-- javascript function -- insert weather -->
-                        <div id="currentWeather" class="card large card-panel z-depth-5">
-                            <div id="location"></div>
-                            <div id="currentTemp"></div>
-                            <div id="currentWind"></div>
-                            <div id="currentHumidity"></div>
-                            <div id="currentUVI"></div>
-                        </div>
-                    </div>
+
+            <!-- col 8 right side container / weather container -->
+            <div class="weather display">
+                <h2 class="city"></h2>
+                <h1 class="temp"></h1>
+                <div class="flex">
+                    <img src="" alt="" class="icon" />
+                    <div class="description"></div>
                 </div>
+                <div class="highLow"></div>
+                <div class="humidity"></div>
 
-            <!-- content divider -->
-            <div class="divider"></div>
-
-            <div class="col s12 card-title large center-align">
-                <h3 class="amber-text text-darken-1">Before You Go . . . </h3>
             </div>
+        </div>
 
-            <!-- divider -->
-            <div class="divider"></div>
+        <!-- divider -->
+        <div class="divider"></div>
 
-            <!-- dad jokes container -->
-            <div id="dad-jokes" class="row center-align">
-                <div class="col s12">
-                    <div class="card large z-depth-5">
-                        <div class="card-image">
-                            <img src="./assets/images/funny-lawn.jpg">
-                            <span class="card-title">Dad Joke Generator</span>
-                        </div>
-                        <div class="card-content">
 
-                            <!-- javascript function -- diplay dad joke -->
-                            <span id="dadJoke" class="center-align">
-                                <h5 class="green-text text-darken-4">Hit the button to generate a dad joke!</h5>
-                            </span>
-                        </div>
-                        <div class="card-action">
+        <!-- dad jokes container -->
+        <div id="dad-jokes" class="row center-align">
+            <div class="col s12">
+                <div class="card large z-depth-5">
+                    <div class="card-image">
+                        <img src="./assets/images/funny-lawn.jpg">
+                        <span class="card-title">Dad Joke Generator</span>
+                    </div>
+                    <div class="card-content">
 
-                            <!-- javascript function -- generate dad joke -->
-                            <button id="generateJokeBtn" type="submit" class="amber darken-1 btn">Generate</button>
-                        </div>
+                        <!-- javascript function -- diplay dad joke -->
+                        <span id="dadJoke" class="center-align">
+                            <h5 class="green-text text-darken-4">Hit the button to generate a dad joke!</h5>
+                        </span>
+                    </div>
+                    <div class="card-action">
+
+                        <!-- javascript function -- generate dad joke -->
+                        <button id="generateJokeBtn" type="submit" class="amber darken-1 btn">Generate</button>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </main>
 
@@ -141,46 +142,52 @@
     <!-- footer/feedback section -->
     <footer id="footer" class="page-footer light-green darken-1">
         <div class="container">
-          <div class="row">
-            <div class="col l6 s12">
-                <h4 class="white-text">Thanks for visiting!</h4>
-                <p class="grey-text text-lighten-4">
-                    We hope you enjoyed our app! This group project was made in the month of June, so we were inspired by Father's Day.
-                </p>
-            </div>
-            <div class="col l4 offset-l2 s12">
 
-                <div class="card small center-align hoverable">
-                    <div class="card-content">
-                        <h5 class="green-text text-darken-3">Contributors</h5>
-
-                        <!-- linkedin links? links to portfolios? or should be do some other kind of form? -->
-                        <ul>
-                            <li><a class="green-text text-darken-1" href="#!">Link 1</a></li>
-                            <li><a class="green-text text-darken-1" href="https://nrenner0211.github.io/my-first-portfolio/">
-                                Nicolette Renner's Portfolio</a>
-                            </li>
-                            <li><a class="green-text text-darken-1" href="#!">Link 3</a></li>
-                            <li><a class="green-text text-darken-1" href="#!">Link 4</a></li>
-                            <li><a class="green-text text-darken-1" href="#!">Link 5</a></li>
-                        </ul>
-                        
-                    </div>
+            <div class="row">
+                <div class="col l6 s12">
+                    <h4 class="white-text">Thanks for visiting!</h4>
+                    <p class="grey-text text-lighten-4">
+                        We hope you enjoyed our app! This group project was made in the month of June, so we were
+                        inspired by Father's Day.
+                    </p>
                 </div>
-              
+                <div class="col l4 offset-l2 s12">
+
+                    <div class="card small center-align hoverable">
+                        <div class="card-content">
+                            <h5 class="green-text text-darken-3">Contributors</h5>
+
+                            <!-- linkedin links? links to portfolios? or should be do some other kind of form? -->
+                            <ul>
+                                <li><a class="green-text text-darken-1" href="#!">Link 1</a></li>
+                                <li><a class="green-text text-darken-1"
+                                        href="https://nrenner0211.github.io/my-first-portfolio/">
+                                        Nicolette Renner's Portfolio</a>
+                                </li>
+                                <li><a class="green-text text-darken-1"
+                                        href="https://christianmspence.github.io/professional-portfolio/">
+                                        Christian Spence's Portfolio</a></li>
+                                <li><a class="green-text text-darken-1" href="#!">Link 4</a></li>
+                                <li><a class="green-text text-darken-1" href="#!">Link 5</a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+
+                </div>
             </div>
-          </div>
-        </div>
-        <div class="footer-copyright">
-          <div class="container">
-          © dad-app
-          <a class="grey-text text-lighten-4 right" alt="Link to an infographic on men's health" href="https://www.mhanational.org/infographic-mental-health-men">Men's Mental Health Month</a>
-          </div>
-        </div>
+            <div class="footer-copyright">
+                <div class="container">
+                    © dad-app
+                    <a class="grey-text text-lighten-4 right" alt="Link to an infographic on men's health"
+                        href="https://www.mhanational.org/infographic-mental-health-men">Men's Mental Health Month</a>
+                </div>
+            </div>
     </footer>
-        
+
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>
+
 </html>
