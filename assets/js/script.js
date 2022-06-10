@@ -78,15 +78,19 @@ jokeButton.addEventListener("click", (e) => {
 });
 
 async function generateJokes() {
+    //pause javascript until fetch is made
     var res = await fetch(url);
+    //pause javascript until json array is returned
     var data = await res.json();
     jokeContainer.innerText = "";
     let joke = "";
+    //check API for jokes in multiple data locations
     if (data.joke == undefined) {
         joke = `${data.setup} ${data.delivery}`;
     } else {
         joke = data.joke;
     }
+    //add joke to container
     jokeContainer.innerText = joke;
 }
 
