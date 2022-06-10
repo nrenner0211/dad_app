@@ -65,6 +65,39 @@ document.querySelector("#mow-button").addEventListener("click", function () {
     document.querySelector("#mow-answer").innerText = answerText;
 });
 
+
+//start of dad joke generator
+
+var jokeContainer = document.querySelector("#dad-joke");
+var jokeButton = document.querySelector("#generate-joke");
+var url = "https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious,racist,sexist,explicit";
+
+//joke generated when clicking generate button
+jokeButton.addEventListener("click", (e) => {
+    generateJokes();
+});
+
+async function generateJokes() {
+    //pause javascript until fetch is made
+    var res = await fetch(url);
+    //pause javascript until json array is returned
+    var data = await res.json();
+    jokeContainer.innerText = "";
+    let joke = "";
+    //check API for jokes in multiple data locations
+    if (data.joke == undefined) {
+        joke = `${data.setup} ${data.delivery}`;
+    } else {
+        joke = data.joke;
+    }
+    //add joke to container
+    jokeContainer.innerText = joke;
+}
+
+
+
+
+
 //Chunk of code of below was erroring and stopping execution -Christian
 
 //header emoji content -- niki
