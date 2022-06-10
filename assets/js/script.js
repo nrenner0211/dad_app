@@ -65,6 +65,25 @@ document.querySelector("#mow-button").addEventListener("click", function () {
     document.querySelector("#mow-answer").innerText = answerText;
 });
 
+
+//start of dad joke generator
+
+let getJoke = () => {
+    fetch('https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=single')
+        .then(response => response.json())
+        .then(response => console.log(response))
+        .catch(err => console.error(err));
+};
+
+document.querySelector("#generate-joke").addEventListener("click", function () {
+
+    getJoke();
+});
+
+
+
+
+
 //Chunk of code of below was erroring and stopping execution -Christian
 
 //header emoji content -- niki
