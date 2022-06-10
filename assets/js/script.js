@@ -68,17 +68,27 @@ document.querySelector("#mow-button").addEventListener("click", function () {
 
 //start of dad joke generator
 
-let getJoke = () => {
-    fetch('https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=single')
-        .then(response => response.json())
-        .then(response => console.log(response))
-        .catch(err => console.error(err));
-};
+var jokeContainer = document.querySelector("#dad-joke");
+var jokeButton = document.querySelector("#generate-joke");
+var url = "https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious,racist,sexist,explicit";
 
-document.querySelector("#generate-joke").addEventListener("click", function () {
-
-    getJoke();
+//joke generated when clicking generate button
+jokeButton.addEventListener("click", (e) => {
+    generateJokes();
 });
+
+async function generateJokes() {
+    var res = await fetch(url);
+    var data = await res.json();
+    jokeContainer.innerText = "";
+    let joke = "";
+    if (data.joke == undefined) {
+        joke = `${data.setup} ${data.delivery}`;
+    } else {
+        joke = data.joke;
+    }
+    jokeContainer.innerText = joke;
+}
 
 
 
