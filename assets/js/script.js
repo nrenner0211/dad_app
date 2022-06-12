@@ -112,13 +112,15 @@ async function generateJokes() {
 
 
 
-//Chunk of code of below was erroring and stopping execution -Christian
+
 
 //header emoji content -- niki
-//var iconArray = document.getElementById("iconArray");
-//var stormY = ["🌩️", "⛈️", "☀️", "🌨️", "🌧️", "☁️", "🌤️", "🌦️"];
+var iconArray = document.getElementById("iconArray");
+var stormY = ["🌩️", "⛈️", "☀️", "🌨️", "🌧️", "☁️", "🌤️", "🌦️"];
 
-//iconArray.addEventListener("mouseover", () => {
-    //iconArray.innerText = stormY[Math.floor(Math.random() * stormY.length)]
-//});
+
+iconArray.addEventListener("mouseover", () => {
+    iconArray.innerText = stormY[Math.floor(Math.random() * stormY.length)]
+});
 //end header emoji content -- niki
+
