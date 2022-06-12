@@ -1,3 +1,14 @@
+
+// weather cookie - cameron cottman
+window.onload = function() {
+    document.cookie.split(';').some((item) => {
+        if (item.trim().startsWith("weather=")) {
+            var lastSearch = item.trim().split('=')[1];
+            weather.fetchWeather(lastSearch);
+        }
+    });
+};
+
 //weather logic begins -Christian
 let isBadWeatherDay = false
 
@@ -48,6 +59,9 @@ let weather = {
 
 //City search event listener -Christian
 document.querySelector("#search-button").addEventListener("click", function () {
+    //  storing cookie -cameron
+    document.cookie = "weather="+document.querySelector(".search-bar").value; 
+    // - Christian
     console.log("search button works");
     weather.search();
     document.querySelector("#mow-button").classList.remove("hide");
@@ -104,7 +118,9 @@ async function generateJokes() {
 var iconArray = document.getElementById("iconArray");
 var stormY = ["🌩️", "⛈️", "☀️", "🌨️", "🌧️", "☁️", "🌤️", "🌦️"];
 
+
 iconArray.addEventListener("mouseover", () => {
     iconArray.innerText = stormY[Math.floor(Math.random() * stormY.length)]
 });
 //end header emoji content -- niki
+
