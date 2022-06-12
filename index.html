@@ -13,12 +13,12 @@
     <title>dad-app</title>
 </head>
 
-<body class="light-green lighten-5">
+<body class="light-green lighten-4">
 
     <!-- navigation -->
     <header>
         <div class="header center-align">
-            <a href="#" class="amber-text text-darken-1">
+            <a href="#" class="amber-text">
                 <h1>dad-app</h1><img alt="best dad png" height="100" width="100" src="./assets/images/best-dad.png">
             </a>
         </div>
@@ -47,7 +47,7 @@
         <!-- col 4 left side content here -->
         <div class="row">
 
-            <div class="col s4">
+            <div class="col s12 m6 l3">
                 <div class="card-panel hoverable input-field">
                     <form id="user-form" class="card-body">
                         <label for="search">Search for your city!</label>
@@ -65,9 +65,8 @@
                 <div class="divider"></div>
 
                 <!-- good day to mow app -->
-                <div id="gdtm-app" class="row">
-                    <div class="col auto center-align">
-                        <div class="card large hoverable">
+                <div id="gdtm-app">
+                        <div class="card large hoverable flow-text center-align">
                             <div class="card-image">
                                 <img alt="grass and lawnmower background" src="./assets/images/mowing.jpg">
                                 <span class="card-title">
@@ -80,61 +79,68 @@
                                 <!-- javascript functionv-- yes/no display -->
                                 <span id="yesOrNo"></span>
                             </div>
-                            <div class="card-action">
+                            <div class="card-action light-green lighten-5">
                                 <span class="search-alert">Search a city to begin!</span>
-                                <button id="mow-button" type="button" class="amber darken-1 btn hide">Good Day To
+                                <button id="mow-button" type="button" class="amber darken-1 btn-large hide">Good Day To
                                     Mow?</button>
                             </div>
-                            <div id="mow-answer"></div>
+                            <div id="mow-answer" class="center-align"></div>
+                        </div>
+                    </div>
+                </div>
+            <!-- </div> -->
+
+
+            <!-- col 8 right side container / weather container -->
+            <div class="row">  
+                <div class="col s12 m12 l9">
+                
+                    <div class="card z-depth-3 center-align">
+
+                        <div class="card-title"><h2><span id="iconArray">🌤️</span> 
+                            Weather Report</h2></div>
+                        
+                        <div class="card large light-green lighten-5 weather display">
+                            <h5 class="city"></h5>
+                            <h1 class="temp"></h1>
+                            <div class="flex">
+                                <img src="" alt="" class="icon" />
+                                <h5 class="description"></h5>
+                            </div>
+                            <h6 class="highLow"></h6>
+                            <h6 class="humidity"></h6>
                         </div>
                     </div>
                 </div>
             </div>
 
-
-            <!-- col 8 right side container / weather container -->
-        <div class="row">  
-            <div class="card col 8">
-                <div class="weather display">
-                    <h2 class="city"></h2>
-                    <h1 class="temp"></h1>
-                    <div class="flex">
-                        <img src="" alt="" class="icon" />
-                        <div class="description"></div>
-                    </div>
-                    <div class="highLow"></div>
-                    <div class="humidity"></div>
-                </div>
-            </div>
-        </div>
-
-        <!-- divider -->
-        <div class="divider"></div>
+            <!-- divider -->
+            <div class="divider"></div>
 
 
-        <!-- dad jokes container -->
-        <div id="dad-jokes" class="row center-align">
-            <div class="col s12">
-                <div class="card large z-depth-5">
-                    <div class="card-image">
-                        <img src="./assets/images/funny-lawn.jpg">
-                        <span class="card-title">Dad Joke Generator</span>
-                    </div>
-                    <div class="card-content">
+            <!-- dad jokes container -->
+            <div id="dad-jokes" class="row center-align">
+                <div class="col s10 offset-s1">
+                    <div class="card large z-depth-3">
+                        <div class="card-image">
+                            <img src="./assets/images/funny-lawn.jpg">
+                            <span class="card-title"><h3>Dad Joke Generator</h3></span>
+                        </div>
+                        <div class="card-content">
 
-                        <!-- javascript function -- diplay dad joke -->
-                        <span id="dad-joke" class="center-align">
-                            <h5 class="green-text text-darken-4">Hit the button to generate a dad joke!</h5>
-                        </span>
-                    </div>
-                    <div class="card-action">
+                            <!-- javascript function -- diplay dad joke -->
+                            <span id="dad-joke" class="center-align">
+                                <h5>Hit the button to generate a dad joke!</h5>
+                            </span>
+                        </div>
+                        <div class="card-action light-green lighten-5">
 
-                        <!-- javascript function -- generate dad joke -->
-                        <button id="generate-joke" type="submit" class="amber darken-1 btn">Generate</button>
+                            <!-- javascript function -- generate dad joke -->
+                            <button id="generate-joke" type="submit" class="flow-text amber darken-1 btn-large">Generate</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
         </div>
     </main>
 
@@ -147,7 +153,7 @@
 
             <div class="row">
                 <div class="col l6 s12">
-                    <h4 class="white-text">Thanks for visiting!</h4>
+                    <h3 class="white-text center-align">Thanks for visiting!</h3>
                     <p class="grey-text text-lighten-4">
                         We hope you enjoyed our app! This group project was made in the month of June, so we were
                         inspired by Father's Day.
@@ -155,23 +161,48 @@
                 </div>
                 <div class="col l4 offset-l2 s12">
 
-                    <div class="card small center-align hoverable">
+                    <div class="card medium center-align hoverable">
                         <div class="card-content">
-                            <h5 class="green-text text-darken-3">Contributors</h5>
 
-                            <!-- linkedin links? links to portfolios? or should be do some other kind of form? -->
-                            <ul>
-                                <li><a class="green-text text-darken-1" href="#!">Link 1</a></li>
-                                <li><a class="green-text text-darken-1"
-                                        href="https://nrenner0211.github.io/my-first-portfolio/">
-                                        Nicolette Renner's Portfolio</a>
-                                </li>
-                                <li><a class="green-text text-darken-1"
-                                        href="https://christianmspence.github.io/professional-portfolio/">
-                                        Christian Spence's Portfolio</a></li>
-                                <li><a class="green-text text-darken-1" href="#!">Link 4</a></li>
-                                <li><a class="green-text text-darken-1" href="#!">Link 5</a></li>
-                            </ul>
+                            <table class="centered highlight">
+                                <thead>
+                                    <tr>
+                                        <th class="green-text text-darken-3">Contributors</th>
+                                    </tr>
+                                </thead>
+                        
+                                <tbody>
+                                    <tr>
+                                        <td><a class="green-text text-darken-1"
+                                            href="https://christianmspence.github.io/professional-portfolio/">
+                                            Christian Spence's Portfolio</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><a class="green-text text-darken-1"
+                                            href="https://nrenner0211.github.io/my-first-portfolio/">
+                                            Nicolette Renner's Portfolio</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><a class="green-text text-darken-1"
+                                            href="">
+                                            Placeholder</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><a class="green-text text-darken-1"
+                                            href="">
+                                            Placeholder</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><a class="green-text text-darken-1"
+                                            href="">
+                                            Placeholder</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
 
                         </div>
                     </div>
