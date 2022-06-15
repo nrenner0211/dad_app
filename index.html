@@ -13,22 +13,25 @@
     <title>dad-app</title>
 </head>
 
-<body class="light-green lighten-4">
+<body class="light-green lighten-3">
 
     <!-- navigation -->
     <header>
         <div class="header center-align">
-            <a href="#" class="amber-text">
+            <a href="#" class="amber-text text-lighten-1">
                 <h1>dad-app</h1><img alt="best dad png" height="100" width="100" src="./assets/images/best-dad.png">
             </a>
         </div>
-        <nav class="light-green darken-1">
+        <nav class="light-green darken-2">
             <ul>
                 <li>
                     <a href="#currentWeather" class="breadcrumb">Weather Report</a>
                 </li>
                 <li>
                     <a href="#gdtm-app" class="breadcrumb">Good Day To Mow?</a>
+                </li>
+                <li>
+                    <a href="#sports-update" class="breadcrumb">Sports Update</a>
                 </li>
                 <li>
                     <a href="#dad-jokes" class="breadcrumb">Dad Joke Generator</a>
@@ -47,7 +50,7 @@
         <!-- col 4 left side content here -->
         <div class="row">
 
-            <div class="col s12 m6 l3">
+            <div class="col s12 m6 l4">
                 <div class="card-panel hoverable input-field">
                     <form id="user-form" class="card-body">
                         <label for="search">Search for your city!</label>
@@ -74,11 +77,6 @@
                                     mow today!
                                 </span>
                             </div>
-                            <div class="text-container">
-
-                                <!-- javascript functionv-- yes/no display -->
-                                <span id="yesOrNo"></span>
-                            </div>
                             <div class="card-action light-green lighten-5">
                                 <span class="search-alert">Search a city to begin!</span>
                                 <button id="mow-button" type="button" class="amber darken-1 btn-large hide">Good Day To
@@ -87,13 +85,35 @@
                             <div id="mow-answer" class="center-align"></div>
                         </div>
                     </div>
+
+                    <!-- divider -->
+                    <div class="divider"></div>
+
+                    <!-- sports update container -->
+                    <div id="sports-update" class="row">
+                        <div class="col auto">
+                        <div class="card hoverable center-align">
+                            <div class="card-image">
+                                <img src="./assets/images/baseball.jpg">
+                                <span class="card-title">Sports Update</span>
+                            </div>
+                            <div class="card-content">
+                                <p>
+                                    Coming soon!
+                                </p>
+                            </div>
+                            <div class="card-action light-green lighten-5">
+                                <a href="#">This is a link</a>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
                 </div>
             <!-- </div> -->
 
-
-            <!-- col 8 right side container / weather container -->
+            <!-- col 9 right side container / weather container -->
             <div class="row">  
-                <div class="col s12 m12 l9">
+                <div class="col s12 m12 l8">
                 
                     <div class="card z-depth-3 center-align">
 
@@ -111,32 +131,31 @@
                             <h6 class="humidity"></h6>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <!-- divider -->
-            <div class="divider"></div>
+                    <!-- divider -->
+                    <div class="divider"></div>
 
+                    <!-- dad jokes container -->
+                    <div id="dad-jokes" class="row center-align">
+                        <div class="col auto">
+                            <div class="card large z-depth-3">
+                                <div class="card-image">
+                                    <img src="./assets/images/funny-lawn.jpg">
+                                    <span class="card-title"><h3>Dad Joke Generator</h3></span>
+                                </div>
+                                <div class="card-content">
 
-            <!-- dad jokes container -->
-            <div id="dad-jokes" class="row center-align">
-                <div class="col s10 offset-s1">
-                    <div class="card large z-depth-3">
-                        <div class="card-image">
-                            <img src="./assets/images/funny-lawn.jpg">
-                            <span class="card-title"><h3>Dad Joke Generator</h3></span>
-                        </div>
-                        <div class="card-content">
+                                    <!-- javascript function -- diplay dad joke -->
+                                    <span id="dad-joke" class="center-align">
+                                        <h5>Hit the button to generate a dad joke!</h5>
+                                    </span>
+                                </div>
+                                <div class="card-action light-green lighten-5">
 
-                            <!-- javascript function -- diplay dad joke -->
-                            <span id="dad-joke" class="center-align">
-                                <h5>Hit the button to generate a dad joke!</h5>
-                            </span>
-                        </div>
-                        <div class="card-action light-green lighten-5">
-
-                            <!-- javascript function -- generate dad joke -->
-                            <button id="generate-joke" type="submit" class="flow-text amber darken-1 btn-large">Generate</button>
+                                    <!-- javascript function -- generate dad joke -->
+                                    <button id="generate-joke" type="submit" class="flow-text amber darken-1 btn-large">Generate</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -148,7 +167,7 @@
     <div class="divider"></div>
 
     <!-- footer/feedback section -->
-    <footer id="footer" class="page-footer light-green darken-1">
+    <footer id="footer" class="page-footer light-green darken-2">
         <div class="container">
 
             <div class="row">
@@ -156,7 +175,7 @@
                     <h3 class="white-text center-align">Thanks for visiting!</h3>
                     <p class="grey-text text-lighten-4">
                         We hope you enjoyed our app! This group project was made in the month of June, so we were
-                        inspired by Father's Day.
+                        inspired by Father's Day. 
                     </p>
                 </div>
                 <div class="col l4 offset-l2 s12">
