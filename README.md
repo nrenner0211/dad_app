@@ -26,6 +26,12 @@ In new updates, we want to add a sales element to the page so that our user stor
 
 We chose [https://materializecss.com/] as our CSS Framework.
 
+Joke API: [https://sv443.net/jokeapi/v2/]
+
+OpenWeather API: [https://openweathermap.org/api]
+
+SportsPage Feeds: [https://sportspagefeeds.com/documentation]
+
 ## Links
 
 Here is our deployed application: [https://nrenner0211.github.io/dad_app/]
