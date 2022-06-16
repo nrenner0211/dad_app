@@ -20,19 +20,21 @@ I can decide if I want to mow grass today
 
 ## Future Updates
 
-In new updates, we want to add a sales element to the page so that our user story looks more attractive.
+In new updates, we want to add a sales element to the page so that our user story looks more attractive. We also want to add more content so that we reach a broader audience, while not losing sight of the original idea of the page.
 
 ## Technologies Used
 
 We chose [https://materializecss.com/] as our CSS Framework.
 
-## Deployed Application
+## Links
 
-[https://nrenner0211.github.io/dad_app/]
+Here is our deployed application: [https://nrenner0211.github.io/dad_app/]
 
-## Screenshot
+And here is the repository location: [https://github.com/nrenner0211/dad_app]
 
-Coming soon!
+## Screen Capture
+
+![A screen capture of the website](assets/images/screen-capture%20(1).gif)
 
 ## Contributors
 

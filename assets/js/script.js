@@ -1,4 +1,3 @@
-
 // weather cookie - cameron cottman
 window.onload = function() {
     document.cookie.split(';').some((item) => {
@@ -79,7 +78,6 @@ document.querySelector("#mow-button").addEventListener("click", function () {
     document.querySelector("#mow-answer").innerText = answerText;
 });
 
-
 //start of dad joke generator
 
 var jokeContainer = document.querySelector("#dad-joke");
@@ -108,16 +106,9 @@ async function generateJokes() {
     jokeContainer.innerText = joke;
 }
 
-
-
-
-
-
-
 //header emoji content -- niki
 var iconArray = document.getElementById("iconArray");
 var stormY = ["🌩️", "⛈️", "☀️", "🌨️", "🌧️", "☁️", "🌤️", "🌦️"];
-
 
 iconArray.addEventListener("mouseover", () => {
     iconArray.innerText = stormY[Math.floor(Math.random() * stormY.length)]
