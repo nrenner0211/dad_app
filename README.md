@@ -30,7 +30,7 @@ Joke API: [https://sv443.net/jokeapi/v2/]
 
 OpenWeather API: [https://openweathermap.org/api]
 
-SportsPage Feeds: [https://sportspagefeeds.com/documentation]
+The Odds API: [https://the-odds-api.com/]
 
 ## Links
 
