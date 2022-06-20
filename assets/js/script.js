@@ -4,6 +4,8 @@ window.onload = function () {
         if (item.trim().startsWith("weather=")) {
             var lastSearch = item.trim().split('=')[1];
             weather.fetchWeather(lastSearch);
+        } else {
+            weather.fetchWeather("New York"); //loads generic city onload -- niki
         }
     });
 };
@@ -63,8 +65,6 @@ document.querySelector("#search-button").addEventListener("click", function () {
     // - Christian
     console.log("search button works");
     weather.search();
-    document.querySelector("#mow-button").classList.remove("hide");
-    document.querySelector(".search-alert").classList.add("hide");
 });
 
 //Good to mow button event listener -Christian
