@@ -38,16 +38,12 @@ Here is our deployed application: [https://nrenner0211.github.io/dad_app/]
 
 And here is the repository location: [https://github.com/nrenner0211/dad_app]
 
-## Screen Capture
-
-![A screen capture of the website](assets/images/screen-capture%20(1).gif)
-
 ## Contact
 
 ### Nicolette Renner
 
 [![Linkedin Badge](https://img.shields.io/badge/nrenner0211-0077B5?style=for-the-badge&logo=linkedin&logoColor=white&link=https://www.linkedin.com/in/nicolette-renner/)](https://www.linkedin.com/in/nicolette-renner/)
-![Gmail Badge](https://img.shields.io/badge/nicolette.rachelle11@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)
+![Gmail Badge](https://img.shields.io/badge/nrenner0211@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)
 
 ## Contributors
 

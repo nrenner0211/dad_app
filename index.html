@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta description="dadApp is a weather app that also includes a dad joke generator and a good day to mow app.">
     <!-- Compiled and minified CSS -->
     <link rel="icon" href="./assets/images/best-dad.png">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" src="./assets/css/style.css">
-    <title>dad-app</title>
+    <title>dadApp</title>
 </head>
 
 <body class="light-green lighten-3">
@@ -18,8 +19,8 @@
     <!-- navigation -->
     <header>
         <div class="header center-align">
-            <a href="#" class="amber-text text-lighten-1">
-                <h1>dad-app</h1><img alt="best dad png" height="100" width="100" src="./assets/images/best-dad.png">
+            <a href="#" class="black-text text-lighten-1">
+                <h1>dadApp</h1><img alt="dad icon" height="100" width="100" src="./assets/images/best-dad.png">
             </a>
         </div>
         <nav class="light-green darken-2">
@@ -31,13 +32,7 @@
                     <a href="#gdtm-app" class="breadcrumb">Good Day To Mow?</a>
                 </li>
                 <li>
-                    <a href="#sports-update" class="breadcrumb">Sports Update</a>
-                </li>
-                <li>
                     <a href="#dad-jokes" class="breadcrumb">Dad Joke Generator</a>
-                </li>
-                <li>
-                    <a href="#footer" class="breadcrumb">Special Thanks & More</a>
                 </li>
             </ul>
         </nav>
@@ -52,7 +47,7 @@
 
             <div class="col s12 m6 l4">
                 <div class="card-panel hoverable input-field">
-                    <form id="user-form" class="card-body">
+                    <form id="user-form" label="search-bar" class="card-body">
                         <label for="search">Search for your city!</label>
                         <input name="searchText" class="search-bar" type="text" autofocus="true">
 
@@ -71,9 +66,10 @@
                 <div id="gdtm-app">
                     <div class="card large hoverable flow-text center-align">
                         <div class="card-image">
-                            <img alt="grass and lawnmower background" src="./assets/images/mowing.jpg">
+                            <img width="100%" height="100%" alt="mowing grass background" src="./assets/images/mowing.webp">
                             <span class="card-title">
-                                Our simple app uses the current weather to help you determine if it's a good day to
+                                <h4>Good Day To Mow?</h4>
+                                Our app uses the current weather to help you determine if it's a good day to
                                 mow today!
                             </span>
                         </div>
@@ -93,7 +89,7 @@
                     <div class="col auto">
                         <div class="card hoverable center-align">
                             <div class="card-image">
-                                <img src="./assets/images/baseball.jpg">
+                                <img width="25%" height="25%" alt="grass texture" src="./assets/images/suburban.webp">
                                 <span class="card-title"><h4>Sports Update</h4></span>
                             </div>
                             <div class="card-action">
@@ -139,7 +135,7 @@
                         <div class="col auto">
                             <div class="card large z-depth-3">
                                 <div class="card-image">
-                                    <img src="./assets/images/funny-lawn.jpg">
+                                    <img width="100%" height="100%" alt="" src="./assets/images/grassbg.webp">
                                     <span class="card-title">
                                         <h4>Dad Joke Generator</h4>
                                     </span>
@@ -174,11 +170,11 @@
 
             <div class="row">
                 <div class="col l6 s12">
-                    <h3 class="white-text center-align">Thanks for visiting!</h3>
+                    <h3 class="white-text center-align">What did you think of dadApp?</h3>
                     <p class="grey-text text-lighten-4">
-                        We hope you enjoyed our app! This group project was made in the month of June, so we were
-                        inspired by Father's Day. June is also Men's Health Month, so we included a link below to some
-                        information. More updates coming soon!
+                        We hope you enjoyed dadApp! This group project was made in the month of June, so we were
+                        inspired by Father's Day. June is also Men's Mental Health Month, so we included a link below to some
+                        information. We hope you found the dadApp useful and entertaining!
                     </p>
                 </div>
                 <div class="col l4 offset-l2 s12">
@@ -196,25 +192,20 @@
                                 <tbody>
                                     <tr>
                                         <td><a class="green-text text-darken-1"
+                                                href="https://nixwebdev.com">
+                                                Nicolette Renner</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><a class="green-text text-darken-1"
                                                 href="https://christianmspence.github.io/professional-portfolio/">
                                                 Christian Spence's Portfolio</a>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td><a class="green-text text-darken-1"
-                                                href="https://nrenner0211.github.io/my-first-portfolio/">
-                                                Nicolette Renner's Portfolio</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><a class="green-text text-darken-1"
                                                 href="https://cmon-theres-gotta-be-a-name-available.github.io/Challenge2/">
                                                 Forrest Benjamin Ridgeway II's Portfolio</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><a class="green-text text-darken-1" href="">
-                                                Cameron Cottman</a>
                                         </td>
                                     </tr>
 
@@ -228,7 +219,7 @@
             </div>
             <div class="footer-copyright">
                 <div class="container">
-                    © dad-app
+                    © dadApp 2024
                     <a class="grey-text text-lighten-4 right" alt="Link to an infographic on men's health"
                         href="https://www.mhanational.org/infographic-mental-health-men">Men's Mental Health Month</a>
                 </div>
